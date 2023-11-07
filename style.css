@@ -1,0 +1,116 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: rgb(16, 234, 234);
+}
+
+.game-container {
+    width: 400px;
+    height: 400px;
+    border: 2px solid #0725e9;
+    position: relative;
+    background-color: black;
+    box-shadow: 0 0 10px rgb(38, 5, 227);
+    margin-bottom: 20px;
+}
+
+.snake-head {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    border-radius: 50%;
+    background-color: green;
+    border: 1px solid #27ae60;
+    transform: rotate(45deg);
+    animation: blinking 1s infinite;
+}
+
+.snake-eye {
+    width: 3px;
+    height: 3px;
+    position: absolute;
+    background-color: black;
+    top: 3px;
+}
+
+.snake-eye.left {
+    left: 2px;
+}
+
+.snake-eye.right {
+    right: 2px;
+}
+
+.snake-mouth {
+    width: 3px;
+    height: 1px;
+    position: absolute;
+    background-color: black;
+    bottom: 2px;
+    left: 4px;
+}
+
+@keyframes blinking {
+    0%, 100% {
+        background-color: green;
+    }
+    50% {
+        background-color: #2ecc71;
+    }
+}
+
+.food {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    border-radius: 50%;
+    background-color: #e74c3c;
+}
+
+.obstacle {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    background-color: #7f8c8d;
+    border-radius: 50%;
+}
+
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: darkblue;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:disabled {
+    background-color: #bdc3c7;
+    cursor: not-allowed;
+}
+
+.game-controls {
+    display: flex;
+    align-items: center;
+}
+
+.game-levels {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.game-levels > label {
+    margin: 5px;
+}
+
+.game-levels > input[type="radio"] {
+    margin: 0 5px;
+}

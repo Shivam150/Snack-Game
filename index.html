@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML5 Snake Game - High Difficulty</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <h1>SNACK OBSTACLE GAME</h1>
+    <div class="game-container">
+        <div class="snake" id="snake"></div>
+        <div class="food" id="food"></div>
+        <div class="obstacle" id="obstacle1"></div>
+        <div class="obstacle" id="obstacle2"></div>
+    </div>
+
+    <button id="startButton" onclick="startGame()">Start</button>
+    <button id="restartButton" onclick="restartGame()" disabled>Restart</button>
+    <div>
+        <input type="radio" id="slow" name="difficulty" value="slow">
+        <label for="slow">Slow</label>
+        <input type="radio" id="medium" name="difficulty" value="medium" checked>
+        <label for="medium">Medium</label>
+        <input type="radio" id="hard" name="difficulty" value="hard">
+        <label for="hard">Hard</label>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
